@@ -13,11 +13,11 @@ export default defineConfig({
       registerType: 'autoUpdate',
       workbox: { globPatterns: ['**/*.{js,css,html,wasm,png,svg}'], maximumFileSizeToCacheInBytes: 8_000_000 },
       manifest: {
-        name: 'Recipe Book',
-        short_name: 'Recipes',
+        name: 'Recipes und Zutaten',
+        short_name: 'R&Z',
         start_url: './',
         display: 'standalone',
-        background_color: '#faf6ef',
+        background_color: '#ffffff',
         theme_color: '#b5532d',
         icons: [
           { src: 'icon-192.png', sizes: '192x192', type: 'image/png' },
