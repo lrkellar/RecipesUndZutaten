@@ -1,0 +1,31 @@
+:root {
+  --bg: #faf6ef; --surface: #fff; --text: #2b2420; --muted: #7a6d63;
+  --accent: #b5532d; --accent-text: #fff; --line: #e6dccf;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1d1916; --surface: #2a2420; --text: #f1e9df; --muted: #a89a8c; --accent: #e07a4f; --accent-text: #1d1916; --line: #3d342d; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 0 16px 96px; }
+h1, h2, h3 { font-family: Georgia, serif; line-height: 1.25; }
+button, input, textarea, select { font: inherit; color: inherit; }
+input, textarea, select { width: 100%; padding: 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+textarea { resize: vertical; min-height: 64px; }
+label { display: block; font-size: 0.85rem; color: var(--muted); margin: 12px 0 4px; }
+button { padding: 10px 16px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; min-height: 44px; }
+button.primary { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+button.link { border: 0; background: none; color: var(--accent); padding: 4px 8px; min-height: 0; }
+button.danger { color: #c0392b; }
+header.bar { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 8px; padding: 10px 16px; }
+header.bar h1 { font-size: 1.2rem; margin: 0; flex: 1; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin: 12px 0; }
+.muted { color: var(--muted); font-size: 0.9rem; }
+.pill { display: inline-block; padding: 2px 10px; border-radius: 999px; background: var(--line); font-size: 0.8rem; margin-right: 6px; }
+ul.plain { list-style: none; padding: 0; margin: 0; }
+.row { display: flex; gap: 8px; align-items: center; }
+.row > * { min-width: 0; }
+.ing-row { display: grid; grid-template-columns: 64px 72px 1fr auto; gap: 6px; margin-bottom: 6px; }
+.recipe-link { display: block; width: 100%; text-align: left; margin: 8px 0; }
+.fab { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); box-shadow: 0 2px 8px rgba(0,0,0,.3); border-radius: 999px; padding: 14px 22px; }
